@@ -1,0 +1,28 @@
+FUNCIONNES:
+f(x) = x + 1   -----> recive un valor (x) y devuelve x + 1
+
+Una vez declarada la funcion se puede usar mulltiples veces
+
+Los valores pasados a una funcion desde afuerase llaman argumentos
+Una vezdentro de la funcion estos se denominan parámetros
+
+El número de argumento es totalmente variable segun cada funcion
+
+Los valores que se devuelvven por la funcion se llaman valor de retorno
+
+------------------------------------------------------------------
+
+Sintaxis en pyton
+
+--Definir funciones--
+def = palabra clave para definir funciones
+nombre_funcion = cadena que a partir de ese momento queda reservada para esa funcion
+() = Dentro de los parentesis irian los argumentos
+
+-Invocar FUNCIONNES
+nombre_funcion(argumento)
+
+ej:
+saludar("mari")
+sumar(3,5)
+

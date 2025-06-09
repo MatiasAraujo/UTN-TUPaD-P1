@@ -87,13 +87,13 @@
 # pantalla; en caso contrario, dejar el string tal cual lo ingresó el usuario e imprimirlo por
 # pantalla.
 
-# # # # # palabra = input("Ingrese una palabra: ")
-# # # # # ult_letra = palabra[len(palabra)-1]
+# palabra = input("Ingrese una palabra: ")
+# ult_letra = palabra[len(palabra)-1]
 
-# # # # # if ult_letra == "a" or ult_letra == "e" or ult_letra == "i" or ult_letra == "o" or ult_letra == "u":
-# # # # #     print(f"{palabra}!")
-# # # # # else:
-# # # # #     print(palabra)
+# if ult_letra == "a" or ult_letra == "e" or ult_letra == "i" or ult_letra == "o" or ult_letra == "u":
+#      print(f"{palabra}!")
+# else:
+#      print(palabra)
 
 #8)
 
@@ -154,5 +154,24 @@
 # # # # #         print("La estacion es Invierno")
 # # # # #     elif (mes == 9 and dia >= 21) or (mes == 12 and dia <= 20) or (mes > 9 and mes < 12):
 # # # # #         print("La estacion es Primavera")
-    
 
+
+numero = int(input("Escriba un numero en decimal para pasar a binario: "))
+binario = ""
+if numero == 0:
+    print("El numero es 0")
+else: 
+
+    while numero > 0:
+        residuo = numero % 2
+        binario = str(residuo) + binario
+        numero = numero // 2       #  division de enteros // (redondea hacia abajo)
+
+print("El numero en binario es: ", binario)
+    
+#GUION
+#Lo que sabiamos: Sabiamos que tenemos que pedir un número al usuario y pasarlo a binario
+#Para eso decidimos utilizar un ciclo while, donde vamos a repetir la acción siempre y cuando el número sea mayor a cero (es decir siempre y cuando el número sea divisible por 2)
+#Dentro del ciclo while definimos una variable "residuo" donde queremos colectar el resultado de la operacion -"numero" mod (%) 2- esto nos da como resultado el resto de dividir el número ingresado por el usuario al dividirlo entre 2
+#Por último necesitabamos que nuestro ciclo a la vez que se repita con esta operación, modifique la variable evaluada. Para ello agregamos la division entera de "numero" entre 2, para que cada vez que se repita e ciclo "número" sea dividido entre dos y asi pueda volver a ser evaluado en el principio del ciclo.
+#Tal y como aprendimos en Matemáticas, para pasar de un número decimal a su representacion en el sistema binario, necesitamos dividir sucesivamente dicho número hasta que el dividendo sea igual a cero. Para obtener el número en su representacion binaria entonces debemos colectar los restos de cada una de las divisiones y colocarlos de forma ordenada de derecha a izquierda, obteniendo asi el resultado requerido
